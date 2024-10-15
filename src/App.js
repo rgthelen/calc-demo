@@ -1,20 +1,12 @@
 import React from 'react';
-import Calculator from './components/Calculator';
-import LoginButton from './components/LoginButton';
-import { useRownd } from '@rownd/react';
+import Calculator from './Calculator';
+import UserMenu from './components/UserMenu';
 
 function App() {
-  const { is_authenticated } = useRownd();
-
   return (
     <div className="App">
-      <h1>Calculator App</h1>
-      <LoginButton />
-      {is_authenticated ? (
-        <Calculator />
-      ) : (
-        <p>Please log in to use the calculator.</p>
-      )}
+      <UserMenu />
+      <Calculator />
     </div>
   );
 }
