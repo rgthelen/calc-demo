@@ -271,7 +271,7 @@ body {
   margin: 0;
 }
 
-.gitlab-button {
+.github-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,8 +283,17 @@ body {
   transition: box-shadow 0.3s ease;
 }
 
-.gitlab-button:hover {
+.github-button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.github-button svg {
+  fill: #333;
+  transition: fill 0.3s ease;
+}
+
+.github-button:hover svg {
+  fill: #0366d6;
 }
 
 .footer {
