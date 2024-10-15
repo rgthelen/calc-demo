@@ -86,3 +86,39 @@ body {
 .calculator .keypad button:last-child:hover {
   background-color: #ff922b;
 }
+
+/* Modern styles for menu buttons */
+.calculator-menu button {
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 8px;
+  color: #495057;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 20px;
+  margin: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-menu button:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.calculator-menu button:active {
+  background-color: #dee2e6;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the active/selected menu item */
+.calculator-menu button.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.calculator-menu button.active:hover {
+  background-color: #45a049;
+}
