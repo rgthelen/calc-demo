@@ -115,9 +115,12 @@ function Calculator() {
           </div>
         </div>
       </div>
-      <a href="https://rownd.io" target="_blank" rel="noopener noreferrer" className="learn-more-button">
-        Learn more
-      </a>
+      <div className="footer">
+        <a href="https://rownd.io" target="_blank" rel="noopener noreferrer" className="learn-more-button">
+          Learn more
+        </a>
+        <p className="credit">By Rob T.</p>
+      </div>
     </div>
   );
 }
