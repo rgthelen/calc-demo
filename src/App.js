@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Calculator from './components/Calculator';
+import LoginButton from './components/LoginButton';
+import { useRownd } from '@rownd/react';
 
 function App() {
+  const { is_authenticated } = useRownd();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Calculator App</h1>
+      <LoginButton />
+      {is_authenticated ? (
+        <Calculator />
+      ) : (
+        <p>Please log in to use the calculator.</p>
+      )}
     </div>
   );
 }
