@@ -1,26 +1,30 @@
 import React from 'react';
 import { useRownd } from '@rownd/react';
 
-const UserMenu = () => {
-  const { is_authenticated, manageAccount, passkeys } = useRownd();
+function UserMenu() {
+  const { is_authenticated, requestSignIn, requestSignOut } = useRownd();
 
-  if (!is_authenticated) {
-    return null;
-  }
+  const handleProfileClick = () => {
+    // Add your profile button logic here
+    console.log('Profile button clicked');
+  };
+
+  const handlePasskeyClick = () => {
+    if (is_authenticated) {
+      requestSignOut();
+    } else {
+      requestSignIn();
+    }
+  };
 
   return (
-    <div style={{ position: 'absolute', top: '10px', right: '10px' }}>
-      <button 
-        onClick={() => passkeys.register()} 
-        style={{ marginRight: '10px' }}
-      >
-        Add Passkey
-      </button>
-      <button onClick={() => manageAccount()}>
-        👤 Profile
+    <div className="auth-buttons">
+      <button className="profile-button" onClick={handleProfileClick}>Profile</button>
+      <button className="passkey-button" onClick={handlePasskeyClick}>
+        {is_authenticated ? 'Sign Out' : 'Sign In'}
       </button>
     </div>
   );
-};
+}
 
 export default UserMenu;

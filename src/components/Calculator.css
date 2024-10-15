@@ -8,6 +8,7 @@ body {
 }
 
 .calculator {
+  position: relative;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -88,7 +89,14 @@ body {
 }
 
 /* Modern styles for menu buttons */
-.calculator-menu button {
+.calculator-app .calculator-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calculator-app .calculator-menu button {
   background-color: #f8f9fa;
   border: none;
   border-radius: 8px;
@@ -101,24 +109,172 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.calculator-menu button:hover {
+.calculator-app .calculator-menu button:hover {
   background-color: #e9ecef;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.calculator-menu button:active {
+.calculator-app .calculator-menu button:active {
   background-color: #dee2e6;
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Style for the active/selected menu item */
-.calculator-menu button.active {
+.calculator-app .calculator-menu button.active {
   background-color: #4CAF50;
   color: white;
 }
 
-.calculator-menu button.active:hover {
+.calculator-app .calculator-menu button.active:hover {
+  background-color: #45a049;
+}
+
+.calculator-app .calculator-menu .auth-buttons {
+  display: flex;
+}
+
+.calculator-app .calculator-menu .auth-buttons .profile-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.calculator-app .calculator-menu .auth-buttons .profile-button:hover {
+  background-color: #45a049;
+}
+
+.calculator-app .calculator-menu .auth-buttons .passkey-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.calculator-app .calculator-menu .auth-buttons .passkey-button:hover {
+  background-color: #1e88e5;
+}
+
+/* Modern styles for Profile and Passkey buttons */
+.calculator-app .auth-buttons button {
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 8px;
+  color: #495057;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 20px;
+  margin: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-app .auth-buttons button:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.calculator-app .auth-buttons button:active {
+  background-color: #dee2e6;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific styles for Profile button */
+.calculator-app .auth-buttons button.profile-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.calculator-app .auth-buttons button.profile-button:hover {
+  background-color: #45a049;
+}
+
+/* Specific styles for Passkey button */
+.calculator-app .auth-buttons button.passkey-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.calculator-app .auth-buttons button.passkey-button:hover {
+  background-color: #1e88e5;
+}
+
+.calculator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.settings-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.settings-button svg {
+  width: 24px;
+  height: 24px;
+  color: #495057;
+}
+
+.settings-menu {
+  position: absolute;
+  top: 0;
+  right: -150px; /* Adjust this value as needed */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 140px; /* Adjust as needed */
+}
+
+.settings-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 5px;
+  color: #495057;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.settings-menu button:hover {
+  background-color: #e9ecef;
+}
+
+.calculator-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.calculator-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.learn-more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.learn-more-button:hover {
   background-color: #45a049;
 }
